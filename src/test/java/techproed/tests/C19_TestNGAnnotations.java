@@ -16,6 +16,14 @@ public class C19_TestNGAnnotations {
     @AfterClass : her bir classdan sonra 1 sefer calisir
     @Before Method : her bir @Test annotationdan once tek sefer calisir. JUnitdeki karsiligi sadece @Before
     @After Method : her bir @Test annotationdan sonra tek sefer calisir. JUnitdeki karsiligi sadece @After
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @Ignore : @Test caseleri atlamak(skip, ignore) icin kullanilir
+    @Test(enabled = false) : @Test caseleri kullanima kapatmak icin kullanilir
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    TestNG de test case'ler isim sirasina gore calisir
+    @Test(priority = 1) : Test caseler oncelemk icin kullanilir
+    NOTE : default priority'nin degeri 0'a esittir
+
      */
 
     @AfterSuite
@@ -56,23 +64,22 @@ public class C19_TestNGAnnotations {
         System.out.println("Before Method");
     }
 
-    @Test
-    public void tests1(){
-
-        System.out.println("Test 1");
-    }@Test
+    @Test(priority = 1)
+    public void tests7(){
+        System.out.println("Test 7");
+    }@Test @Ignore
     public void tests2(){
 
         System.out.println("Test 2");
-    }@Test
+    }@Test(enabled = false)
     public void tests3(){
 
         System.out.println("Test 3");
-    }@Test
+    }@Test(priority = -5)
     public void tests4(){
 
         System.out.println("Test 4");
-    }@Test
+    }@Test(priority = 2)
     public void tests5(){
 
         System.out.println("Test 5");
