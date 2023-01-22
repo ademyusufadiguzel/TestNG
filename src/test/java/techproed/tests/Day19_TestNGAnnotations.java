@@ -1,9 +1,8 @@
 package techproed.tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.*;
 
-public class C19_TestNGAnnotations {
+public class Day19_TestNGAnnotations {
 
     /*
     @Test : Test case olusturmak icin kullanilir
