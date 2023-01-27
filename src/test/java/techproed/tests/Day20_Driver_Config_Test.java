@@ -16,6 +16,7 @@ public class Day20_Driver_Config_Test {
         Driver.getDriver().get(ConfigReader.getProperty("amazon_url"));
         //title'in amaozn icerdigini test et
         String pageTitle = Driver.getDriver().getTitle();
+
         Assert.assertTrue(pageTitle.contains("Amazon"));
 
         //Close Driver
