@@ -9,6 +9,8 @@ public class Day20_DependsOnMethods {
     public void homeTest(){
         System.out.println("Home Test");
         Assert.assertTrue(false);
+
+
     }
     @Test(dependsOnMethods = "homeTest")
     public void searchTest(){
