@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="classes" thread-count="2">
     <listeners>
         <listener class-name="techproed.utilities.Listeners"></listener>
     </listeners>
@@ -9,9 +9,13 @@
         <classes>
             <class name="techproed.tests.listeners.Day27_ListenersTest2">
                 <methods>
+<!--                    PASS -->
                     <include name="test1"/>
+<!--                    FAIL -> 2 kez run edilecek-->
                     <include name="test2"/>
+<!--                    SKIP -->
                     <include name="test3"/>
+<!--                    FAIL -> 2 kez run-->
                     <include name="test4"/>
                 </methods>
             </class>
